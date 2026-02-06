@@ -1,5 +1,5 @@
 # lume 🍃
-# Bilgisayarınızdaki .jpg gibi dosyaları sadece birkaç tıkla istediğiniz klasör altında toplayın ve listeleyin.
+# Akıllı fotoğraf arşivleme: EXIF metadata'sı ile otomatik klasörleme, MD5 ile kopya algılama
 
 <p align="left"> 
     <a href="https://www.instagram.com/umutyalcine?igsh=c21xZ2psNG56cHN5" target="_blank">
