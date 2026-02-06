@@ -18,7 +18,7 @@
 ## Uygulama ile alakalı birkaç ekran görüntüsü / A few screenshots related to the app
 
 <p align="center">
-    <img src="lume python version main theme dark en.png" alt="1" width="300" style="margin-right: 10px;"/> 
+    <img src="lume python version window main dark en.png" alt="1" width="300" style="margin-right: 10px;"/> 
     <img src="lume python version main theme light en.png" alt="2" width="300"/>
     <img src="lume python version window main light en.png" alt="3" width="300"/>
     <img src="selected and listed light theme.png" alt="4" width="300"/>
