@@ -121,13 +121,18 @@ Versions: We have 2 versions for Lume; one of them is a 10 MB exe file written i
 
 ---
 
-💡 Eklenecekler / To Be Added: Uygulama geliştirilecek ve sıkıştırılacak daha sonra yayınlanacaktır. O zamana kadar yerel olarak kullanabilirsiniz. Potansiyel güvenlik açığı çıkma ihtimali bitirilecek.
+💡 Eklenecekler: Uygulama geliştirilecek ve sıkıştırılacak daha sonra yayınlanacaktır. O zamana kadar yerel olarak kullanabilirsiniz. Potansiyel güvenlik açığı çıkma ihtimali bitirilecek //siberde asla bitmez
+
+💡 To Be Added: The application will be further developed and compressed before its final release. Until then, you may use it locally. Potential security vulnerabilities will be eliminated as much as possible //though in cyber security, the work is never truly finished.
 
 ---
 
 Serbest:
 
-- Uygulamanın genel amacı
+- Uygulamanın genel amacı desteklenen formatlardaki dosyaları sadece birkaç tıkla klasörlemek.
 - Uygulamanın iki versiyonunu da güvenlik taramalarından geçirdim ve gerekli yerler ile potansiyel tehditleri fixledim. Bu fixlediğim kısımlar ve onların mantığı hakkında blog yazısı da yazacağım. Onun haricinde uygulama ile alakalı herhangi bir durum olursa "artabqos251@gmail.com" adresine mail atabilirsiniz.
+
+- General Purpose of the Application Organizing files in various formats into folders with just a few clicks.
+- I have conducted security scans on both versions of the application and fixed all identified vulnerabilities and potential threats. I will also be publishing a blog post explaining these fixes and the logic behind them. Aside from that, if you encounter any issues regarding the application, you can reach out via email at "artabqos251@gmail.com".
   
 
