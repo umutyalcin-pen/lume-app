@@ -126,6 +126,48 @@ Versions: We have 2 versions for Lume; one of them is a 10 MB exe file written i
 💡 To Be Added: The application will be further developed and compressed before its final release. Until then, you may use it locally. Potential security vulnerabilities will be eliminated as much as possible //though in cyber security, the work is never truly finished.
 
 ---
+Lume CLİ
+
+- Lume Cli versiyonunu kullanmak için github file içindeki dosyaları indirin ve alttaki adımları izleyin
+
+- 🇹🇷 Türkçe Kullanım
+
+Adım 1: PowerShell Aç
+Windows + R tuşlarına bas
+powershell yaz ve Enter'a bas
+
+Adım 2: EXE'nin Olduğu Klasöre Git
+powershell
+cd "C:\Users\Umut\Desktop\lume cli version"
+
+Adım 3: Programı Çalıştır
+powershell
+.\Lume_LITE.exe "C:\KaynakKlasor" "C:\HedefKlasor"
+Örnek:
+powershell
+.\Lume_LITE.exe "C:\Users\Umut\Pictures" "C:\Users\Umut\Arsiv"
+
+
+- To use the Lume CLI version, download the files inside the GitHub file and follow the steps below:
+
+- 🇬🇧 English Usage
+  
+Step 1: Open PowerShell
+Press Windows + R
+Type powershell and press Enter
+
+Step 2: Navigate to EXE Folder
+powershell
+cd "C:\Users\Umut\Desktop\lume cli version"
+
+Step 3: Run the Program
+powershell
+.\Lume_LITE.exe "C:\SourceFolder" "C:\TargetFolder"
+Example:
+powershell
+.\Lume_LITE.exe "C:\Users\Umut\Pictures" "C:\Users\Umut\Archive"
+
+---
 
 Serbest:
 
