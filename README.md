@@ -26,6 +26,7 @@
     <img src="listed screenshots.png" alt="1" width="300" style="margin-right: 10px;"/> 
     <img src="bar app icon.png" alt="2" width="300"/>
     <img src="lume go version logo.png" alt="2" width="300"/>
+     <img src="lume cli version powershell.png" alt="2" width="300"/>
 </p>
 
 ---
