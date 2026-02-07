@@ -32,7 +32,6 @@ Not: EXIF desteği yok, dosya tarihi kullanılır.
 
 	src, dst := os.Args[1], os.Args[2]
 
-	// Path validation
 	absSrc, _ := filepath.Abs(src)
 	absDst, _ := filepath.Abs(dst)
 	if absSrc == absDst {
@@ -64,7 +63,6 @@ Not: EXIF desteği yok, dosya tarihi kullanılır.
 			return nil
 		}
 
-		// Skip symlinks
 		if info.Mode()&os.ModeSymlink != 0 {
 			return nil
 		}
@@ -74,7 +72,6 @@ Not: EXIF desteği yok, dosya tarihi kullanılır.
 			return nil
 		}
 
-		// Use file modification time
 		t := info.ModTime()
 		year := fmt.Sprintf("%d", t.Year())
 		month := fmt.Sprintf("%02d", t.Month())
@@ -88,7 +85,6 @@ Not: EXIF desteği yok, dosya tarihi kullanılır.
 
 		targetPath := filepath.Join(targetDir, info.Name())
 
-		// Check duplicate
 		if _, err := os.Stat(targetPath); err == nil {
 			if isDuplicate(path, targetPath) {
 				fmt.Printf("⏭️  Kopya atlandı: %s\n", info.Name())
@@ -97,16 +93,13 @@ Not: EXIF desteği yok, dosya tarihi kullanılır.
 			targetPath = resolveConflict(targetPath)
 		}
 
-		// Move file
 		if err := os.Rename(path, targetPath); err != nil {
-			// Try copy if rename fails (cross-drive)
 			if err := copyFile(path, targetPath); err != nil {
 				fmt.Printf("❌ %s: %v\n", info.Name(), err)
 				errors++
 				return nil
 			}
 
-			// Verify copy integrity before deleting source
 			srcHash, err1 := fileHash(path)
 			dstHash, err2 := fileHash(targetPath)
 			if err1 != nil || err2 != nil || srcHash != dstHash {
@@ -118,7 +111,6 @@ Not: EXIF desteği yok, dosya tarihi kullanılır.
 				return nil
 			}
 
-			// Safe to delete source now
 			if err := os.Remove(path); err != nil {
 				fmt.Printf("⚠️  %s → %s/%s (kaynak korundu)\n", info.Name(), year, month)
 			} else {
@@ -185,6 +177,5 @@ func copyFile(src, dst string) error {
 		return err
 	}
 
-	// Ensure data is flushed to disk
 	return out.Sync()
 }
