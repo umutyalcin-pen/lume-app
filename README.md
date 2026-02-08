@@ -4,9 +4,6 @@
 
 
 
-
----
-
 ## Uygulama ile alakalı birkaç ekran görüntüsü / A few screenshots related to the app
 
 <p align="center">
