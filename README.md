@@ -33,6 +33,7 @@ Türkçe Tanıtım
 Bilgisayarınızdaki dosyaları tek tek düzeltmeye artık gerek yok. Bu tool belirli formattaki dosyaları saniyeler içinde tarar, tek bir klasör altında güvenle kopyalayıp arşivler ve işlem sonunda detaylı bir liste sunar.
 
 Avantajları neler?
+
 .Yüzlerce dosyayı tek tek seçmek yerine tek tıkla hedef klasöre aktarın.
 
 .İhtiyacınız olan desteklenen medya uzantılarını arşivleyebilirsiniz (.jpg, .png, .mp4, .mov vb.).
@@ -47,6 +48,7 @@ English Introduction
 No need to manually edit files on your computer one by one. This tool scans files of a specific format in seconds, securely copies and archives them under a single folder, and provides a detailed list at the end of the process.
 
 What are the advantages?
+
 . Transfer hundreds of files to the target folder with a single click instead of selecting them one by one.
 
 . Target only the supported media extensions you need (.jpg, .png, .mp4, .mov, etc.).
@@ -112,16 +114,14 @@ Full code transparency
 - `lume_config.json` - Local settings for GUI versions 
   
 - `lume_app.log` - Local operation log for GUI versions
-  
-- **No personal data** is stored or transmitted
 
 ---
 
 ## VirusTotal Doğrulamaları / VirusTotal Verification
 
-Lume'un Python GUI, Go GUI ve Go CLI sürümleri için yayınlanan çalıştırılabilir dosyalar VirusTotal üzerinde ayrıca kontrol edilebilir. Bu bölüm, release dosyalarının güvenlik tarama sonuçlarını README içinde tek yerde göstermek için ayrılmıştır.
+Lume'un Python GUI, Go GUI ve Go CLI sürümleri için yayınlanan çalıştırılabilir dosyalar VirusTotal üzerinde ayrıca kontrol edilebilir. Bu bölüm release dosyalarının güvenlik tarama sonuçlarını README içinde tek yerde göstermek için ayrılmıştır.
 
-VirusTotal sonuçları tek başına mutlak garanti değildir; ancak kullanıcıların indirdikleri dosyayı bağımsız antivirüs motorlarıyla karşılaştırmasına yardımcı olur. Lume internet bağlantısı gerektirmeden yerel makinede çalışır, telemetri veya analiz verisi göndermez ve dosya düzenleme işlemlerini kullanıcının seçtiği kaynak/hedef klasörler üzerinde yürütür.
+VirusTotal sonuçları tek başına kesinlik içermez ancak kullanıcıların indirdikleri dosyayı karşılaştırmaya yardımcı olur. Lume internet bağlantısı gerektirmeden yerel makinede çalışır, telemetri veya analiz verisi göndermez ve dosya düzenleme işlemlerini kullanıcının seçtiğii klasörler üzerinde yürütür.
 
 The executable files published for the Python GUI, Go GUI, and Go CLI versions of Lume can also be checked on VirusTotal. This section is reserved to keep the security scan screenshots for all three versions in one place.
 
