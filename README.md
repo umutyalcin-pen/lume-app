@@ -35,7 +35,7 @@ Bilgisayarınızdaki dosyaları tek tek düzeltmeye artık gerek yok. Bu tool be
 Avantajları neler?
 .Yüzlerce dosyayı tek tek seçmek yerine tek tıkla hedef klasöre aktarın.
 
-.İstediğiniz dosya uzantısını arşivleyebilirsiniz.
+.İhtiyacınız olan desteklenen medya uzantılarını arşivleyebilirsiniz (.jpg, .png, .mp4, .mov vb.).
 
 .İşlem sonunda hangi dosyanın nereye kopyalanıp arşivlendiğini net bir şekilde görün.
 
@@ -49,15 +49,15 @@ No need to manually edit files on your computer one by one. This tool scans file
 What are the advantages?
 . Transfer hundreds of files to the target folder with a single click instead of selecting them one by one.
 
-. Target only the extensions you need (.jpg, .pdf, .mp4, etc.).
+. Target only the supported media extensions you need (.jpg, .png, .mp4, .mov, etc.).
 
 . Clearly see which file was copied and archived where at the end of the process.
 
 ---
 
-Versiyonlar: Lume'un 3 farklı sürümü bulunmaktadır: Python GUI, Go GUI ve Go CLI. Sürümlere ait dosyalar Görseller repoda detaylı olarak bulunuyor.
+Versiyonlar: Lume'un 3 farklı sürümü bulunmaktadır: Python GUI, Go GUI ve Go CLI. Her sürüme ait dosyalar ve ekran görüntüleri bu repoda detaylı olarak bulunuyor.
 
-Versions: Lume has 3 different versions: Python GUI, Go GUI, and Go CLI. Files for each version are available in detail in the Images repository.
+Versions: Lume has 3 different versions: Python GUI, Go GUI, and Go CLI. Files and screenshots for each version are available in detail in this repository.
 
 ---
 
@@ -90,11 +90,12 @@ Tüm işlemler yerel makinenizde çalışır.
 Veri toplama yok.
 Dosyalar bilgisayarınızda tutulur
 Açık kaynak bir projedir
+Kişisel veri saklanmaz veya gönderilmez
 
 ## Veri Depolama
-- `lume_config.json` - Yerel ayarlar 
+- `lume_config.json` - GUI sürümlerinde yerel ayarlar 
 
-- `lume_app.log` - Yerel işlem loglanması
+- `lume_app.log` - GUI sürümlerinde yerel işlem loglanması
 
 ---
 
@@ -108,11 +109,33 @@ Full code transparency
 
 ## Data Storage
 
-- `lume_config.json` - Local settings 
+- `lume_config.json` - Local settings for GUI versions 
   
-- `lume_app.log` - Local operation log
+- `lume_app.log` - Local operation log for GUI versions
   
 - **No personal data** is stored or transmitted
+
+---
+
+## VirusTotal Doğrulamaları / VirusTotal Verification
+
+Lume'un Python GUI, Go GUI ve Go CLI sürümleri için yayınlanan çalıştırılabilir dosyalar VirusTotal üzerinde ayrıca kontrol edilebilir. Bu bölüm, release dosyalarının güvenlik tarama sonuçlarını README içinde tek yerde göstermek için ayrılmıştır.
+
+VirusTotal sonuçları tek başına mutlak garanti değildir; ancak kullanıcıların indirdikleri dosyayı bağımsız antivirüs motorlarıyla karşılaştırmasına yardımcı olur. Lume internet bağlantısı gerektirmeden yerel makinede çalışır, telemetri veya analiz verisi göndermez ve dosya düzenleme işlemlerini kullanıcının seçtiği kaynak/hedef klasörler üzerinde yürütür.
+
+The executable files published for the Python GUI, Go GUI, and Go CLI versions of Lume can also be checked on VirusTotal. This section is reserved to keep the security scan screenshots for all three versions in one place.
+
+VirusTotal results are not an absolute guarantee by themselves, but they help users compare the downloaded files against independent antivirus engines. Lume runs locally without requiring an internet connection, does not send telemetry or analytics data, and only works on the source/target folders selected by the user.
+
+| Sürüm / Version | Dosya / File | VirusTotal Görseli / Screenshot |
+| --- | --- | --- |
+| Python GUI | `Lume.exe` | Görsel eklenecek / Screenshot will be added |
+| Go GUI | `Lume_Pro.exe` | Görsel eklenecek / Screenshot will be added |
+| Go CLI | `lume.cli.version.compact.exe` | [Go CLI VirusTotal scan](screenshots/virustotal/go-cli-virustotal.png) |
+
+<p align="center">
+  <img src="screenshots/virustotal/go-cli-virustotal.png" alt="Go CLI VirusTotal scan" width="700"/>
+</p>
 
 ---
 Lume CLI
@@ -178,7 +201,7 @@ Options and Parameters:
 * `--dry-run`    : Runs in simulation mode. No folders are created on disk.
 * `--help`, `-h` : Shows the bilingual help menu.
 
-Example (with EXIF analysis and smart renaming):
+Example (with EXIF and renaming):
 ```powershell
 .\Lume_LITE.exe "C:\SourceFolder" "C:\TargetFolder" --exif --rename
 ```
@@ -188,10 +211,10 @@ Example (with EXIF analysis and smart renaming):
 Serbest / Misc:
 
 - Uygulamanın genel amacı desteklenen formatlardaki dosyaları bilgisayarınızda düzgün bir şekilde kopyalayıp arşivlemektir.
-- Uygulamanın tüm versiyonlarını güvenlik taramalarından geçirdim ve tespit ettiğim potansiyel tehditleri düzeltip kod güvenliğini artırdım. Düzeltilen kısımlar ve arkasındaki mantık hakkında yakında bir blog yazısı da paylaşacağım. Uygulamayla ilgili her türlü geri bildirim ve soru için "artabqos251@gmail.com" adresinden bana ulaşabilirsiniz.
+- Uygulamanın tüm versiyonlarını güvenlik taramalarından geçirdim ve tespit ettiğim potansiyel riskleri düzeltip kod güvenliğini artırdım. Düzeltilen kısımlar ve arkasındaki mantık hakkında yakında bir blog yazısı da paylaşacağım. Uygulamayla ilgili her türlü geri bildirim ve soru için "artabqos251@gmail.com" adresinden bana ulaşabilirsiniz.
 
 - The main purpose of the application is to neatly copy and archive files in supported formats on your computer.
-- I have conducted comprehensive security scans on all versions of the application, resolving potential vulnerabilities and optimizing code safety. I will also publish a blog post detailing these fixes and the engineering decisions behind them. For any inquiries or feedback, feel free to contact me at "artabqos251@gmail.com".
+- I have conducted comprehensive security scans on all versions of the application, resolving potential risks and improving code safety. I will also publish a blog post detailing these fixes and the engineering decisions behind them. For any inquiries or feedback, feel free to contact me at "artabqos251@gmail.com".
 
 ---
 
