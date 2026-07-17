@@ -203,7 +203,6 @@ def get_file_info(file_path: str) -> dict:
         # Get file size
         file_size = os.path.getsize(file_path)
         ext = os.path.splitext(file_path)[1].lower()
-        is_video = ext in {'.mov', '.mp4'}
         
         # Get EXIF data (skip for large files/videos, only JPEG and TIFF support EXIF in piexif)
         has_exif_support = ext in {'.jpg', '.jpeg', '.tiff', '.tif'}

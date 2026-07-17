@@ -188,25 +188,27 @@ def move_file(file_info: Dict, target_base: str) -> bool:
         
         # Pre-copy integrity check
         source_hash = file_info.get('full_hash') or get_file_hash(source, quick=False)
+        if not source_hash:
+            logger.error(f"Integrity hash unavailable for {filename}; source preserved")
+            return False
         
         # SAFE METHOD: Copy -> Verify -> Delete (instead of move)
         # Step 1: Copy file to target
         shutil.copy2(source, final_target)
         
         # Step 2: Verify copy integrity
-        if source_hash:
-            target_hash = get_file_hash(final_target, quick=False)
+        target_hash = get_file_hash(final_target, quick=False)
+
+        if target_hash != source_hash:
+            logger.error(f"Integrity check FAILED for {filename}! Removing corrupt copy...")
             
-            if target_hash != source_hash:
-                logger.error(f"Integrity check FAILED for {filename}! Removing corrupt copy...")
-                
-                # Remove corrupt copy
-                try:
-                    os.remove(final_target)
-                    logger.info(f"Corrupt copy removed, source preserved: {filename}")
-                except Exception as remove_err:
-                    logger.critical(f"CRITICAL: Failed to remove corrupt copy: {remove_err}")
-                return False
+            # Remove corrupt copy
+            try:
+                os.remove(final_target)
+                logger.info(f"Corrupt copy removed, source preserved: {filename}")
+            except Exception as remove_err:
+                logger.critical(f"CRITICAL: Failed to remove corrupt copy: {remove_err}")
+            return False
         
         # Step 3: Delete source only after verified copy
         try:

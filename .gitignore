@@ -1,5 +1,9 @@
 # Log files (contains local user paths and filenames)
 *.log
+*.log.*
+
+# Built binaries are published through GitHub Releases
+*.exe
 
 # Backup folders (local development copies)
 **/backup_*/
