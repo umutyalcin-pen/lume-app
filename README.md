@@ -48,9 +48,9 @@ Bu araç desteklenen medya dosyalarını saniyeler içinde tarar, tek bir hedef 
 
 ### Avantajları neler?
 
-- Yüzlerce dosyayı tek tek seçmek yerine tek tıkla hedef klasöre aktarın.
-- İhtiyacınız olan desteklenen medya uzantılarını arşivleyebilirsiniz (.jpg, .png, .mp4, .mov vb.).
-- İşlem sonunda hangi dosyanın nereye kopyalanıp arşivlendiğini net bir şekilde görün.
+.Yüzlerce dosyayı tek tek seçmek yerine tek tıkla hedef klasöre aktarın.
+.İhtiyacınız olan desteklenen medya uzantılarını arşivleyebilirsiniz (.jpg, .png, .mp4, .mov vb.).
+.İşlem sonunda hangi dosyanın nereye kopyalanıp arşivlendiğini net bir şekilde görün.
 
 Versiyonlar: Lume'un 3 farklı sürümü bulunmaktadır: Python GUI, Go GUI ve Go CLI.
 Her sürüme ait dosyalar ve ekran görüntüleri bu repoda detaylı olarak bulunuyor.
@@ -66,9 +66,9 @@ This tool scans supported media files in seconds, securely copies and archives t
 
 ### What are the advantages?
 
-- Transfer hundreds of files to the target folder with a single click instead of selecting them one by one.
-- Target only the supported media extensions you need (.jpg, .png, .mp4, .mov, etc.).
-- Clearly see which file was copied and archived where at the end of the process.
+.Transfer hundreds of files to the target folder with a single click instead of selecting them one by one.
+.Target only the supported media extensions you need (.jpg, .png, .mp4, .mov, etc.).
+.Clearly see which file was copied and archived where at the end of the process.
 
 Versions: Lume has 3 different versions: Python GUI, Go GUI, and Go CLI.
 Files and screenshots for each version are available in detail in this repository.
@@ -101,12 +101,12 @@ Files and screenshots for each version are available in detail in this repositor
 
 ## Gizlilik & Güvenlik
 
-- Tüm işlemler yerel makinenizde çalışır.
-- İnternet bağlantısı gerekmez.
-- Veri toplama veya analiz yoktur.
-- Dosyalar bilgisayarınızda tutulur.
-- Açık kaynak bir projedir.
-- Kişisel veri saklanmaz veya gönderilmez.
+.Tüm işlemler yerel makinenizde çalışır.
+.İnternet bağlantısı gerekmez.
+.Veri toplama veya analiz yoktur.
+.Dosyalar bilgisayarınızda tutulur.
+.Açık kaynak bir projedir.
+.Kişisel veri saklanmaz veya gönderilmez.
 
 ## Veri Depolama
 
@@ -118,12 +118,12 @@ Files and screenshots for each version are available in detail in this repositor
 
 ## Privacy & Security
 
-- All operations run locally on your machine.
-- No internet connection is required or used.
-- No data collection or analytics.
-- Files stay on your computer.
-- Open source project.
-- No personal data is stored or transmitted.
+.All operations run locally on your machine.
+.No internet connection is required or used.
+.No data collection or analytics.
+.Files stay on your computer.
+.Open source project.
+.No personal data is stored or transmitted.
 
 ## Data Storage
 
@@ -151,8 +151,8 @@ Lume runs locally and does not require internet access, telemetry, or analytics.
 
 ### Python GUI
 
-- Dosya / File: `lume_python_gui.exe`
-- VirusTotal görseli / Screenshot: [Python GUI VirusTotal scan](screenshots/virustotal/python-gui-virustotal.png)
+.Dosya / File: `lume_python_gui.exe`
+.VirusTotal görseli / Screenshot: [Python GUI VirusTotal scan](screenshots/virustotal/python-gui-virustotal.png)
 
 <p align="center">
   <img src="screenshots/virustotal/python-gui-virustotal.png" alt="Python GUI VirusTotal scan" width="700"/>
@@ -160,8 +160,8 @@ Lume runs locally and does not require internet access, telemetry, or analytics.
 
 ### Go GUI
 
-- Dosya / File: `lume_go_gui.exe`
-- VirusTotal görseli / Screenshot: [Go GUI VirusTotal scan](screenshots/virustotal/go-gui-virustotal.png)
+.Dosya / File: `lume_go_gui.exe`
+.VirusTotal görseli / Screenshot: [Go GUI VirusTotal scan](screenshots/virustotal/go-gui-virustotal.png)
 
 <p align="center">
   <img src="screenshots/virustotal/go-gui-virustotal.png" alt="Go GUI VirusTotal scan" width="700"/>
@@ -169,8 +169,8 @@ Lume runs locally and does not require internet access, telemetry, or analytics.
 
 ### Go CLI
 
-- Dosya / File: `lume_go_cli.exe`
-- VirusTotal görseli / Screenshot: [Go CLI VirusTotal scan](screenshots/virustotal/go-cli-virustotal.png)
+.Dosya / File: `lume_go_cli.exe`
+.VirusTotal görseli / Screenshot: [Go CLI VirusTotal scan](screenshots/virustotal/go-cli-virustotal.png)
 
 <p align="center">
   <img src="screenshots/virustotal/go-cli-virustotal.png" alt="Go CLI VirusTotal scan" width="700"/>
@@ -180,9 +180,9 @@ Lume runs locally and does not require internet access, telemetry, or analytics.
 
 ## Lume CLI
 
-- Lume CLI versiyonunu kullanmak için GitHub'daki dosyaları indirin ve aşağıdaki adımları izleyin.
+.Lume CLI versiyonunu kullanmak için GitHub'daki dosyaları indirin ve aşağıdaki adımları izleyin.
 
-- Türkçe Kullanım
+.Türkçe Kullanım
 
 Adım 1: PowerShell'i Açın
 - `Windows + R` tuşlarına basın.
@@ -216,13 +216,13 @@ Seçenekler ve Parametreler:
 
 ---
 
-- To use the Lume CLI version, download the files from GitHub and follow the steps below:
+.To use the Lume CLI version, download the files from GitHub and follow the steps below:
 
-- English Usage
+.English Usage
   
 Step 1: Open PowerShell
-- Press `Windows + R`.
-- Type `powershell` and press Enter.
+.Press `Windows + R`.
+.Type `powershell` and press Enter.
 
 Step 2: Navigate to EXE Folder
 ```powershell
@@ -254,10 +254,10 @@ Example (with EXIF and renaming):
 
 Serbest
 
-- Uygulamanın genel amacı desteklenen formatlardaki dosyaları bilgisayarınızda düzgün bir şekilde kopyalayıp arşivlemektir.
-- Uygulamanın tüm versiyonlarını güvenlik taramalarından geçirdim ve tespit ettiğim potansiyel riskleri düzeltip kod güvenliğini artırdım.
-- Düzeltilen kısımlar ve arkasındaki mantık hakkında yakında bir blog yazısı da paylaşacağım.
-- Uygulamayla ilgili her türlü geri bildirim ve soru için "artabqos251@gmail.com" adresinden bana ulaşabilirsiniz.
+.Uygulamanın genel amacı desteklenen formatlardaki dosyaları bilgisayarınızda düzgün bir şekilde kopyalayıp arşivlemektir.
+.Uygulamanın tüm versiyonlarını güvenlik taramalarından geçirdim ve tespit ettiğim potansiyel riskleri düzeltip kod güvenliğini artırdım.
+.Düzeltilen kısımlar ve arkasındaki mantık hakkında yakında bir blog yazısı da paylaşacağım.
+.Uygulamayla ilgili her türlü geri bildirim ve soru için "artabqos251@gmail.com" adresinden bana ulaşabilirsiniz.
 
 Misc
 
