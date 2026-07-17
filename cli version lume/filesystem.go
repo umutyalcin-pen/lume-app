@@ -12,7 +12,6 @@ import (
 	"unsafe"
 )
 
-// fileEntry: tek taramada toplanan dosya bilgisi (TOCTOU önlendi)
 type fileEntry struct {
 	path    string
 	size    int64
@@ -20,14 +19,10 @@ type fileEntry struct {
 	mode    os.FileMode
 }
 
-// collectFiles kaynak dizini tek seferde tarar; desteklenen dosyaları toplar,
-// canlı ilerleme sayacı gösterir. TOCTOU'yu önlemek için Process aşamasında
-// ikinci bir tarama yapılmaz.
 func collectFiles(src string) ([]fileEntry, int64, error) {
 	var files []fileEntry
 	var totalSize int64
-	var scanned atomic.Int64 // Goroutine'ler arası güvenli sayaç
-	// Canlı sayaç: her 200ms'de bir güncelle
+	var scanned atomic.Int64
 	ticker := time.NewTicker(200 * time.Millisecond)
 	defer ticker.Stop()
 	done := make(chan struct{})
@@ -57,7 +52,6 @@ func collectFiles(src string) ([]fileEntry, int64, error) {
 			return nil
 		}
 
-		// Symlink'leri atla
 		if d.Type()&os.ModeSymlink != 0 {
 			return nil
 		}
@@ -66,7 +60,7 @@ func collectFiles(src string) ([]fileEntry, int64, error) {
 		if _, found := supportedFiles[ext]; found {
 			info, errInfo := d.Info()
 			if errInfo != nil {
-				return nil // Erişim hatası olan dosyayı sessizce atla
+				return nil
 			}
 			files = append(files, fileEntry{
 				path:    path,
@@ -82,13 +76,11 @@ func collectFiles(src string) ([]fileEntry, int64, error) {
 
 	close(done)
 
-	// Sayacı temizle ve sonucu yaz
 	fmt.Printf("\r[INFO] Toplam bulunan dosya: %-10d\n", len(files))
 
 	return files, totalSize, err
 }
 
-// checkDiskSpace hedef diskin yeterli alana sahip olup olmadığını kontrol eder.
 func checkDiskSpace(path string, requiredBytes int64) error {
 	volName := filepath.VolumeName(path)
 	if volName == "" {
@@ -129,7 +121,6 @@ func checkDiskSpace(path string, requiredBytes int64) error {
 	return nil
 }
 
-// isSystemDir korumalı sistem dizinlerini tespit eder.
 func isSystemDir(path string) bool {
 	realPath, err := filepath.EvalSymlinks(path)
 	if err != nil {

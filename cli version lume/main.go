@@ -21,12 +21,9 @@ const (
 )
 
 var supportedFiles = map[string]MediaType{
-	// Görseller
 	".jpg": TypeImage, ".jpeg": TypeImage, ".png": TypeImage, ".webp": TypeImage,
 	".heic": TypeImage, ".tiff": TypeImage, ".gif": TypeImage, ".bmp": TypeImage,
-	// RAW formatları
 	".dng": TypeRaw, ".cr2": TypeRaw, ".nef": TypeRaw, ".arw": TypeRaw, ".orf": TypeRaw,
-	// Videolar
 	".mp4": TypeVideo, ".mov": TypeVideo, ".avi": TypeVideo, ".mkv": TypeVideo,
 	".m4v": TypeVideo, ".flv": TypeVideo, ".wmv": TypeVideo, ".mpg": TypeVideo, ".mpeg": TypeVideo,
 	".3gp": TypeVideo,
@@ -142,7 +139,6 @@ func main() {
 		}
 	}
 
-	// Tek tarama: dosyaları topla, ilerlemeyi canlı göster
 	files, totalSize, errCollect := collectFiles(absSrc)
 	if errCollect != nil {
 		fmt.Printf("[FATAL] Dosyalar taranırken hata oluştu: %v\n", errCollect)
@@ -187,7 +183,6 @@ func main() {
 		ctx:          ctx,
 	}
 
-	// Tek seviyeli graceful shutdown: context cancel ile copyAndHashFile anında durur
 	signal.Notify(org.sigChan, os.Interrupt, syscall.SIGTERM)
 	go func() {
 		first := true

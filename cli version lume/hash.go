@@ -10,7 +10,6 @@ import (
 	"path/filepath"
 )
 
-// fileHash hesaplar dosyanın SHA-256 hash'ini.
 func fileHash(path string) (string, error) {
 	f, err := os.Open(path)
 	if err != nil {
@@ -24,9 +23,6 @@ func fileHash(path string) (string, error) {
 	return hex.EncodeToString(h.Sum(nil)), nil
 }
 
-// copyAndHashFile kaynak dosyayı hedefe kopyalar, eş zamanlı SHA-256 hesaplar.
-// Context cancellation ile büyük dosya kopyalamaları anında durdurulabilir.
-// Başarılı kopyalamada hash döner; hata durumunda hedef dosya otomatik temizlenir.
 func copyAndHashFile(ctx context.Context, src, dst string, mode os.FileMode) (string, error) {
 	in, err := os.Open(src)
 	if err != nil {
@@ -39,7 +35,6 @@ func copyAndHashFile(ctx context.Context, src, dst string, mode os.FileMode) (st
 		return "", err
 	}
 
-	// Hata durumunda hedefi temizle
 	var success bool
 	defer func() {
 		out.Close()
@@ -49,10 +44,9 @@ func copyAndHashFile(ctx context.Context, src, dst string, mode os.FileMode) (st
 	}()
 
 	h := sha256.New()
-	buf := make([]byte, 64*1024) // 64KB chunk'lar
+	buf := make([]byte, 64*1024)
 
 	for {
-		// Context iptal kontrolü — chunk'lar arasında
 		select {
 		case <-ctx.Done():
 			return "", ctx.Err()

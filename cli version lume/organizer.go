@@ -46,7 +46,6 @@ func (o *Organizer) Process(entry fileEntry) error {
 
 	path := entry.path
 
-	// Symlink kontrolü (collectFiles sırasında da yapıldı, çift koruma)
 	if entry.mode&os.ModeSymlink != 0 {
 		return nil
 	}
@@ -78,7 +77,6 @@ func (o *Organizer) Process(entry fileEntry) error {
 
 	targetPath := filepath.Join(targetDir, filename)
 
-	// Tembel hash: sadece duplicate kontrolü gerektiğinde hesapla
 	var srcHash string
 	var errHash error
 	getSrcHash := func() (string, error) {
@@ -131,7 +129,6 @@ func (o *Organizer) Process(entry fileEntry) error {
 		return nil
 	}
 
-	// Gerçek kopyalama modu
 	isTargetConflict := false
 	if _, err := os.Lstat(targetPath); !os.IsNotExist(err) {
 		isTargetConflict = true
