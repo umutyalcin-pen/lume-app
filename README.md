@@ -157,7 +157,11 @@ Lume runs locally without requiring an internet connection, does not send teleme
 ### Go GUI
 
 - Dosya / File: `lume_go_gui.exe`
-- VirusTotal görseli / Screenshot: Görsel eklenecek / Screenshot will be added
+- VirusTotal görseli / Screenshot: [Go GUI VirusTotal scan](screenshots/virustotal/go-gui-virustotal.png)
+
+<p align="center">
+  <img src="screenshots/virustotal/go-gui-virustotal.png" alt="Go GUI VirusTotal scan" width="700"/>
+</p>
 
 ### Go CLI
 
