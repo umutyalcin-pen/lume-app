@@ -153,7 +153,11 @@ Lume runs locally without requiring an internet connection, does not send teleme
 ### Python GUI
 
 - Dosya / File: `lume_python_gui.exe`
-- VirusTotal görseli / Screenshot: Görsel eklenecek / Screenshot will be added
+- VirusTotal görseli / Screenshot: [Python GUI VirusTotal scan](screenshots/virustotal/python-gui-virustotal.png)
+
+<p align="center">
+  <img src="screenshots/virustotal/python-gui-virustotal.png" alt="Python GUI VirusTotal scan" width="700"/>
+</p>
 
 ### Go GUI
 
@@ -189,7 +193,9 @@ Adım 2: EXE'nin Olduğu Klasöre Gidin
 ```powershell
 cd "C:\DosyaYolu\lume-app\cli version lume"
 ```
-*(Lütfen `"C:\DosyaYolu..."` kısmını indirdiğiniz proje klasörünün kendi bilgisayarınızdaki gerçek yolu ile değiştirin.)*
+
+Not:
+`"C:\DosyaYolu..."` kısmını indirdiğiniz proje klasörünün kendi bilgisayarınızdaki gerçek yolu ile değiştirin.
 
 Adım 3: Programı Çalıştırın
 
@@ -223,7 +229,9 @@ Step 2: Navigate to EXE Folder
 ```powershell
 cd "C:\PathToProject\lume-app\cli version lume"
 ```
-*(Please replace `"C:\PathToProject..."` with the actual path of the project folder on your computer.)*
+
+Note:
+Replace `"C:\PathToProject..."` with the actual path of the project folder on your computer.
 
 Step 3: Run the Program
 
