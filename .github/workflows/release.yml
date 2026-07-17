@@ -21,6 +21,24 @@ jobs:
         with:
           go-version: '1.25.7'
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Build Python GUI version
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pyinstaller
+          python -m pip install -r "python version lume\requirements.txt"
+          cd "python version lume"
+          pyinstaller --noconfirm --onefile --windowed --name Lume --icon lume.ico --add-data "lume.png;." --add-data "lume.ico;." main.py
+
+      - name: Build Go GUI version
+        run: |
+          cd "go version lume"
+          go build -ldflags="-H windowsgui" -o Lume_Pro.exe .
+
       - name: Build CLI version
         run: |
           cd "cli version lume"
@@ -30,6 +48,8 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: |
+            python version lume/dist/Lume.exe
+            go version lume/Lume_Pro.exe
             cli version lume/lume.cli.version.compact.exe
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
