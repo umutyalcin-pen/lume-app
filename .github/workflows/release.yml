@@ -32,17 +32,17 @@ jobs:
           python -m pip install pyinstaller
           python -m pip install -r "python version lume\requirements.txt"
           cd "python version lume"
-          pyinstaller --noconfirm --onefile --windowed --name Lume_Python_GUI --icon lume.ico --add-data "lume.png;." --add-data "lume.ico;." main.py
+          pyinstaller --noconfirm --onefile --windowed --name lume_python_gui --icon lume.ico --add-data "lume.png;." --add-data "lume.ico;." main.py
 
       - name: Build Go GUI version
         run: |
           cd "go version lume"
-          go build -ldflags="-H windowsgui" -o Lume_Go_GUI.exe .
+          go build -ldflags="-H windowsgui" -o lume_go_gui.exe .
 
       - name: Build CLI version
         run: |
           cd "cli version lume"
-          go build -o Lume_Go_CLI.exe .
+          go build -o lume_go_cli.exe .
 
       - name: Remove old release assets
         uses: actions/github-script@v7
@@ -55,6 +55,9 @@ jobs:
               'Lume_Python_GUI.exe',
               'Lume_Go_GUI.exe',
               'Lume_Go_CLI.exe',
+              'lume_python_gui.exe',
+              'lume_go_gui.exe',
+              'lume_go_cli.exe',
             ]);
 
             const release = await github.rest.repos.getReleaseByTag({
@@ -79,8 +82,8 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            python version lume/dist/Lume_Python_GUI.exe
-            go version lume/Lume_Go_GUI.exe
-            cli version lume/Lume_Go_CLI.exe
+            python version lume/dist/lume_python_gui.exe
+            go version lume/lume_go_gui.exe
+            cli version lume/lume_go_cli.exe
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
