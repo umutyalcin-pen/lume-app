@@ -1,12 +1,12 @@
-# Lume CLI (Lume_LITE.exe) PowerShell Test Guide
+# Lume CLI (lume_go_cli.exe) PowerShell Test Guide
 
-This guide helps you test all Lume CLI (`Lume_LITE.exe`) features, parameters, and error-protection rules by using the `peashot` and `sunflow` folders on your Desktop.
+This guide helps you test all Lume CLI (`lume_go_cli.exe`) features, parameters, and error-protection rules by using the `peashot` and `sunflow` folders on your Desktop.
 
 ---
 
 ## Preparation
 
-- **EXE Location:** `C:\Users\Umut\Downloads\lume-app-main\cli version lume\Lume_LITE.exe`
+- **EXE Location:** `C:\Users\Umut\Downloads\lume-app-main\cli version lume\lume_go_cli.exe`
 - **Test Source Folder (Desktop):** `C:\Users\Umut\Desktop\peashot`
 - **Test Target Folder (Desktop):** `C:\Users\Umut\Desktop\sunflow`
 
@@ -17,37 +17,37 @@ This guide helps you test all Lume CLI (`Lume_LITE.exe`) features, parameters, a
 ### 1. Help Menu Test
 
 ```powershell
-& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\Lume_LITE.exe" --help
+& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\lume_go_cli.exe" --help
 ```
 
 ### 2. Unknown / Invalid Parameter Warning Test
 
 ```powershell
-& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\Lume_LITE.exe" --hata-parametre
+& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\lume_go_cli.exe" --hata-parametre
 ```
 
 ### 3. Standard Simulation Test (ModTime Dry-Run)
 
 ```powershell
-& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\Lume_LITE.exe" "C:\Users\Umut\Desktop\peashot" "C:\Users\Umut\Desktop\sunflow" --dry-run
+& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\lume_go_cli.exe" "C:\Users\Umut\Desktop\peashot" "C:\Users\Umut\Desktop\sunflow" --dry-run
 ```
 
 ### 4. EXIF-Based Archive Simulation (EXIF Dry-Run)
 
 ```powershell
-& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\Lume_LITE.exe" "C:\Users\Umut\Desktop\peashot" "C:\Users\Umut\Desktop\sunflow" --exif --dry-run
+& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\lume_go_cli.exe" "C:\Users\Umut\Desktop\peashot" "C:\Users\Umut\Desktop\sunflow" --exif --dry-run
 ```
 
 ### 5. Rename Simulation (Rename Dry-Run)
 
 ```powershell
-& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\Lume_LITE.exe" "C:\Users\Umut\Desktop\peashot" "C:\Users\Umut\Desktop\sunflow" --rename --dry-run
+& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\lume_go_cli.exe" "C:\Users\Umut\Desktop\peashot" "C:\Users\Umut\Desktop\sunflow" --rename --dry-run
 ```
 
 ### 6. Full Simulation (EXIF + Rename + Dry-Run)
 
 ```powershell
-& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\Lume_LITE.exe" "C:\Users\Umut\Desktop\peashot" "C:\Users\Umut\Desktop\sunflow" --exif --rename --dry-run
+& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\lume_go_cli.exe" "C:\Users\Umut\Desktop\peashot" "C:\Users\Umut\Desktop\sunflow" --exif --rename --dry-run
 ```
 
 ---
@@ -57,19 +57,19 @@ This guide helps you test all Lume CLI (`Lume_LITE.exe`) features, parameters, a
 ### 7. Same Folder Protection Test (Infinite Loop Prevention)
 
 ```powershell
-& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\Lume_LITE.exe" "C:\Users\Umut\Desktop\peashot" "C:\Users\Umut\Desktop\peashot" --dry-run
+& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\lume_go_cli.exe" "C:\Users\Umut\Desktop\peashot" "C:\Users\Umut\Desktop\peashot" --dry-run
 ```
 
 ### 8. Nested Folder Protection Test
 
 ```powershell
-& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\Lume_LITE.exe" "C:\Users\Umut\Desktop\peashot" "C:\Users\Umut\Desktop\peashot\hedef_alt_klasor" --dry-run
+& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\lume_go_cli.exe" "C:\Users\Umut\Desktop\peashot" "C:\Users\Umut\Desktop\peashot\hedef_alt_klasor" --dry-run
 ```
 
 ### 9. Missing Source Directory Protection Test
 
 ```powershell
-& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\Lume_LITE.exe" "C:\Users\Umut\Desktop\olmayan_klasor_yolu" "C:\Users\Umut\Desktop\sunflow" --dry-run
+& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\lume_go_cli.exe" "C:\Users\Umut\Desktop\olmayan_klasor_yolu" "C:\Users\Umut\Desktop\sunflow" --dry-run
 ```
 
 ---
@@ -79,7 +79,7 @@ This guide helps you test all Lume CLI (`Lume_LITE.exe`) features, parameters, a
 ### 10. Live Copying and Renaming (Real Archiving)
 
 ```powershell
-& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\Lume_LITE.exe" "C:\Users\Umut\Desktop\peashot" "C:\Users\Umut\Desktop\sunflow" --exif --rename
+& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\lume_go_cli.exe" "C:\Users\Umut\Desktop\peashot" "C:\Users\Umut\Desktop\sunflow" --exif --rename
 ```
 
 ---

@@ -1,12 +1,12 @@
-# Lume CLI (Lume_LITE.exe) PowerShell Test Kılavuzu
+# Lume CLI (lume_go_cli.exe) PowerShell Test Kılavuzu
 
-Bu kılavuz, Lume CLI (`Lume_LITE.exe`) uygulamasının tüm özelliklerini, parametrelerini ve hata koruma kurallarını masaüstünüzdeki `peashot` ve `sunflow` klasörleri üzerinden test edebilmeniz için hazırlanmıştır.
+Bu kılavuz, Lume CLI (`lume_go_cli.exe`) uygulamasının tüm özelliklerini, parametrelerini ve hata koruma kurallarını masaüstünüzdeki `peashot` ve `sunflow` klasörleri üzerinden test edebilmeniz için hazırlanmıştır.
 
 ---
 
 ## Hazırlık
 
-- **EXE Konumu:** `C:\Users\Umut\Downloads\lume-app-main\cli version lume\Lume_LITE.exe`
+- **EXE Konumu:** `C:\Users\Umut\Downloads\lume-app-main\cli version lume\lume_go_cli.exe`
 - **Test Kaynak Klasörü (Masaüstü):** `C:\Users\Umut\Desktop\peashot`
 - **Test Hedef Klasörü (Masaüstü):** `C:\Users\Umut\Desktop\sunflow`
 
@@ -17,37 +17,37 @@ Bu kılavuz, Lume CLI (`Lume_LITE.exe`) uygulamasının tüm özelliklerini, par
 ### 1. Yardım Menüsü Testi
 
 ```powershell
-& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\Lume_LITE.exe" --help
+& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\lume_go_cli.exe" --help
 ```
 
 ### 2. Bilinmeyen / Geçersiz Parametre Uyarısı Testi
 
 ```powershell
-& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\Lume_LITE.exe" --hata-parametre
+& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\lume_go_cli.exe" --hata-parametre
 ```
 
 ### 3. Standart Simülasyon Testi (ModTime Dry-Run)
 
 ```powershell
-& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\Lume_LITE.exe" "C:\Users\Umut\Desktop\peashot" "C:\Users\Umut\Desktop\sunflow" --dry-run
+& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\lume_go_cli.exe" "C:\Users\Umut\Desktop\peashot" "C:\Users\Umut\Desktop\sunflow" --dry-run
 ```
 
 ### 4. EXIF Tarihine Göre Arşivleme Simülasyonu (EXIF Dry-Run)
 
 ```powershell
-& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\Lume_LITE.exe" "C:\Users\Umut\Desktop\peashot" "C:\Users\Umut\Desktop\sunflow" --exif --dry-run
+& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\lume_go_cli.exe" "C:\Users\Umut\Desktop\peashot" "C:\Users\Umut\Desktop\sunflow" --exif --dry-run
 ```
 
 ### 5. Yeniden Adlandırma Simülasyonu (Rename Dry-Run)
 
 ```powershell
-& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\Lume_LITE.exe" "C:\Users\Umut\Desktop\peashot" "C:\Users\Umut\Desktop\sunflow" --rename --dry-run
+& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\lume_go_cli.exe" "C:\Users\Umut\Desktop\peashot" "C:\Users\Umut\Desktop\sunflow" --rename --dry-run
 ```
 
 ### 6. Tam Kapsamlı Simülasyon (EXIF + Rename + Dry-Run)
 
 ```powershell
-& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\Lume_LITE.exe" "C:\Users\Umut\Desktop\peashot" "C:\Users\Umut\Desktop\sunflow" --exif --rename --dry-run
+& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\lume_go_cli.exe" "C:\Users\Umut\Desktop\peashot" "C:\Users\Umut\Desktop\sunflow" --exif --rename --dry-run
 ```
 
 ---
@@ -57,19 +57,19 @@ Bu kılavuz, Lume CLI (`Lume_LITE.exe`) uygulamasının tüm özelliklerini, par
 ### 7. Aynı Klasör Koruması Testi (Sonsuz Döngü Engeli)
 
 ```powershell
-& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\Lume_LITE.exe" "C:\Users\Umut\Desktop\peashot" "C:\Users\Umut\Desktop\peashot" --dry-run
+& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\lume_go_cli.exe" "C:\Users\Umut\Desktop\peashot" "C:\Users\Umut\Desktop\peashot" --dry-run
 ```
 
 ### 8. İç İçe Klasör Koruması Testi (Nested Folder Prevention)
 
 ```powershell
-& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\Lume_LITE.exe" "C:\Users\Umut\Desktop\peashot" "C:\Users\Umut\Desktop\peashot\hedef_alt_klasor" --dry-run
+& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\lume_go_cli.exe" "C:\Users\Umut\Desktop\peashot" "C:\Users\Umut\Desktop\peashot\hedef_alt_klasor" --dry-run
 ```
 
 ### 9. Olmayan Kaynak Dizin Koruması Testi
 
 ```powershell
-& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\Lume_LITE.exe" "C:\Users\Umut\Desktop\olmayan_klasor_yolu" "C:\Users\Umut\Desktop\sunflow" --dry-run
+& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\lume_go_cli.exe" "C:\Users\Umut\Desktop\olmayan_klasor_yolu" "C:\Users\Umut\Desktop\sunflow" --dry-run
 ```
 
 ---
@@ -79,7 +79,7 @@ Bu kılavuz, Lume CLI (`Lume_LITE.exe`) uygulamasının tüm özelliklerini, par
 ### 10. Canlı Kopyalama ve Yeniden Adlandırma (Gerçek Arşivleme)
 
 ```powershell
-& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\Lume_LITE.exe" "C:\Users\Umut\Desktop\peashot" "C:\Users\Umut\Desktop\sunflow" --exif --rename
+& "C:\Users\Umut\Downloads\lume-app-main\cli version lume\lume_go_cli.exe" "C:\Users\Umut\Desktop\peashot" "C:\Users\Umut\Desktop\sunflow" --exif --rename
 ```
 
 ---
