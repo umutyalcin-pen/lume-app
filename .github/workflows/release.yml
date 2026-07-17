@@ -24,20 +24,12 @@ jobs:
       - name: Build CLI version
         run: |
           cd "cli version lume"
-          go build -o Lume_LITE.exe .
-          Compress-Archive -Path Lume_LITE.exe -DestinationPath Lume_LITE.zip
-
-      - name: Build GUI version
-        run: |
-          cd "go version lume"
-          go build -ldflags="-H windowsgui" -o Lume_Pro.exe .
-          Compress-Archive -Path Lume_Pro.exe -DestinationPath Lume_Pro.zip
+          go build -o lume.cli.version.compact.exe .
 
       - name: Upload Binaries to GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            cli version lume/Lume_LITE.zip
-            go version lume/Lume_Pro.zip
+            cli version lume/lume.cli.version.compact.exe
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
