@@ -135,20 +135,19 @@ Files and screenshots for each version are available in detail in this repositor
 
 ## VirusTotal Doğrulamaları
 
-Lume'un Python GUI, Go GUI ve Go CLI sürümleri için yayınlanan çalıştırılabilir dosyalar VirusTotal üzerinde ayrıca kontrol edilebilir.
-Bu bölüm, release dosyalarının güvenlik tarama sonuçlarını README içinde tek yerde göstermek için ayrılmıştır.
+Lume'un Python GUI, Go GUI ve Go CLI sürümleri için yayınlanan `.exe` dosyalarını VirusTotal üzerinde ayrıca kontrol edebilirsiniz.
+Tarama ekran görüntülerini burada tek yerde paylaşıyorum.
 
-VirusTotal sonuçları tek başına mutlak garanti değildir; ancak kullanıcıların indirdikleri dosyayı bağımsız antivirüs motorlarıyla karşılaştırmasına yardımcı olur.
-Lume internet bağlantısı gerektirmeden yerel makinede çalışır, telemetri veya analiz verisi göndermez.
-Dosya düzenleme işlemlerini kullanıcının seçtiği kaynak/hedef klasörler üzerinde yürütür.
+VirusTotal tek başına kesin güvenlik garantisi değildir, ama indirilen dosyayı farklı antivirüs motorlarıyla hızlıca karşılaştırmak için iyi bir referanstır.
+Lume yerel çalışır; internet bağlantısı, telemetri veya analiz gönderimi kullanmaz.
 
 ## VirusTotal Verification
 
-The executable files published for the Python GUI, Go GUI, and Go CLI versions of Lume can also be checked on VirusTotal.
-This section is reserved to keep the security scan screenshots for all three versions in one place.
+You can also check the released `.exe` files for the Python GUI, Go GUI, and Go CLI versions on VirusTotal.
+I keep the scan screenshots here in one place.
 
-VirusTotal results are not an absolute guarantee by themselves, but they help users compare the downloaded files against independent antivirus engines.
-Lume runs locally without requiring an internet connection, does not send telemetry or analytics data, and only works on the source/target folders selected by the user.
+VirusTotal is not a complete security guarantee by itself, but it is a useful reference for comparing a downloaded file against multiple antivirus engines.
+Lume runs locally and does not require internet access, telemetry, or analytics.
 
 ### Python GUI
 
