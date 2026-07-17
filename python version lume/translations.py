@@ -1,8 +1,3 @@
-"""
-Lume Centralized Translation System
-Supports: English (en), Turkish (tr)
-"""
-
 TRANSLATIONS = {
     "en": {
         "file_list": "📋 File List",
@@ -67,10 +62,10 @@ TRANSLATIONS = {
 }
 
 def get_text(lang, key, **kwargs):
-    """Safely retrieves translated text with fallback."""
+
     lang_batch = TRANSLATIONS.get(lang, TRANSLATIONS["en"])
     text = lang_batch.get(key, key)
-    
+
     if kwargs:
         try:
             return text.format(**kwargs)
