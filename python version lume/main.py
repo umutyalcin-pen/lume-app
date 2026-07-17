@@ -9,7 +9,7 @@ import sys
 import time
 import threading
 import tkinter as tk
-from tkinter import ttk, filedialog, messagebox
+from tkinter import filedialog, messagebox
 from pathlib import Path
 
 from tkinterdnd2 import DND_FILES, TkinterDnD
