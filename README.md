@@ -59,7 +59,7 @@ Her sürüme ait dosyalar ve ekran görüntüleri bu repoda detaylı olarak bulu
 
 ## English Introduction
 
-### File Editor
+File Editor
 
 No need to manually organize files on your computer one by one.
 This tool scans supported media files in seconds, securely copies and archives them under a single target folder, and provides a detailed list at the end of the process.
