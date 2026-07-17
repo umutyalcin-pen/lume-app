@@ -18,6 +18,7 @@ Automatic folder organization with EXIF metadata, duplicate detection with MD5 (
 <p align="center">
     <img src="screenshots/lume python version window main dark en.png" alt="1" width="300" style="margin-right: 10px;"/> 
     <img src="screenshots/lume python version window main light en.png" alt="3" width="300"/>
+    <img src="screenshots/lume python version dpi sharp tr.png" alt="Python GUI DPI sharp Turkish screenshot" width="300"/>
     <img src="screenshots/lume go version light tr.png" alt="3" width="300"/>
     <img src="screenshots/lume go version light en.png" alt="4" width="300"/>
     <img src="screenshots/listed folders month.png" alt="5" width="300"/>
