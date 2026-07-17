@@ -32,24 +32,24 @@ jobs:
           python -m pip install pyinstaller
           python -m pip install -r "python version lume\requirements.txt"
           cd "python version lume"
-          pyinstaller --noconfirm --onefile --windowed --name Lume --icon lume.ico --add-data "lume.png;." --add-data "lume.ico;." main.py
+          pyinstaller --noconfirm --onefile --windowed --name Lume_Python_GUI --icon lume.ico --add-data "lume.png;." --add-data "lume.ico;." main.py
 
       - name: Build Go GUI version
         run: |
           cd "go version lume"
-          go build -ldflags="-H windowsgui" -o Lume_Pro.exe .
+          go build -ldflags="-H windowsgui" -o Lume_Go_GUI.exe .
 
       - name: Build CLI version
         run: |
           cd "cli version lume"
-          go build -o lume.cli.version.compact.exe .
+          go build -o Lume_Go_CLI.exe .
 
       - name: Upload Binaries to GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            python version lume/dist/Lume.exe
-            go version lume/Lume_Pro.exe
-            cli version lume/lume.cli.version.compact.exe
+            python version lume/dist/Lume_Python_GUI.exe
+            go version lume/Lume_Go_GUI.exe
+            cli version lume/Lume_Go_CLI.exe
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -151,17 +151,17 @@ Lume runs locally without requiring an internet connection, does not send teleme
 
 ### Python GUI
 
-- Dosya / File: `Lume.exe`
+- Dosya / File: `Lume_Python_GUI.exe`
 - VirusTotal görseli / Screenshot: Görsel eklenecek / Screenshot will be added
 
 ### Go GUI
 
-- Dosya / File: `Lume_Pro.exe`
+- Dosya / File: `Lume_Go_GUI.exe`
 - VirusTotal görseli / Screenshot: Görsel eklenecek / Screenshot will be added
 
 ### Go CLI
 
-- Dosya / File: `lume.cli.version.compact.exe`
+- Dosya / File: `Lume_Go_CLI.exe`
 - VirusTotal görseli / Screenshot: [Go CLI VirusTotal scan](screenshots/virustotal/go-cli-virustotal.png)
 
 <p align="center">
