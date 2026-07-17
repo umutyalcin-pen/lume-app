@@ -1,4 +1,4 @@
-# lume 🍃 
+# Lume
 ![Windows](https://img.shields.io/badge/Windows-0078D4?style=for-the-badge&logo=windows11&logoColor=white) 
 
 ### Fotoğraf ve video arşivleme
@@ -75,7 +75,7 @@ Files and screenshots for each version are available in detail in this repositor
 
 ---
 
-### 💻 Proje Teknolojileri
+### Proje Teknolojileri
 
 ### Project Technologies
 
@@ -182,7 +182,7 @@ Lume runs locally and does not require internet access, telemetry, or analytics.
 
 - Lume CLI versiyonunu kullanmak için GitHub'daki dosyaları indirin ve aşağıdaki adımları izleyin.
 
-- 🇹🇷 Türkçe Kullanım
+- Türkçe Kullanım
 
 Adım 1: PowerShell'i Açın
 - `Windows + R` tuşlarına basın.
@@ -218,7 +218,7 @@ Seçenekler ve Parametreler:
 
 - To use the Lume CLI version, download the files from GitHub and follow the steps below:
 
-- 🇬🇧 English Usage
+- English Usage
   
 Step 1: Open PowerShell
 - Press `Windows + R`.
