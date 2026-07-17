@@ -22,7 +22,7 @@ Automatic folder organization with EXIF metadata, duplicate detection with MD5 (
     <img src="screenshots/lume go version light tr.png" alt="3" width="300"/>
     <img src="screenshots/lume go version light en.png" alt="4" width="300"/>
     <img src="screenshots/listed folders month.png" alt="5" width="300"/>
-    <img src="screenshots/lume go version logo.png" alt="2" width="300"/>
+    <img src="screenshots/lume current logo.png" alt="Current Lume logo" width="300"/>
     <img src="screenshots/lume cli version powershell.png" alt="2" width="300"/>
     <img src="screenshots/lume cli version powershell success.png" alt="2" width="300"/>
     <img src="screenshots/lume cli version powershell simulation.png" alt="2" width="300"/>
