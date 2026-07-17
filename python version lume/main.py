@@ -26,6 +26,31 @@ from translations import get_text
 MAX_FILES_LIMIT = 10000
 MAX_PATH_LENGTH = 260  # Windows MAX_PATH
 
+def enable_windows_dpi_awareness():
+    """Enable crisp text rendering on high-DPI Windows displays."""
+    if sys.platform != "win32":
+        return
+
+    try:
+        import ctypes
+
+        try:
+            # Per-monitor DPI awareness gives the sharpest text on modern Windows.
+            ctypes.windll.shcore.SetProcessDpiAwareness(2)
+            return
+        except Exception:
+            pass
+
+        try:
+            ctypes.windll.shcore.SetProcessDpiAwareness(1)
+            return
+        except Exception:
+            pass
+
+        ctypes.windll.user32.SetProcessDPIAware()
+    except Exception:
+        pass
+
 class LumeApp(TkinterDnD.Tk):
     """Main application class (Super Lightweight - Security Hardened)."""
     
@@ -665,5 +690,6 @@ class LumeApp(TkinterDnD.Tk):
 
 
 if __name__ == "__main__":
+    enable_windows_dpi_awareness()
     app = LumeApp()
     app.mainloop()

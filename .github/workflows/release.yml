@@ -32,7 +32,7 @@ jobs:
           python -m pip install pyinstaller
           python -m pip install -r "python version lume\requirements.txt"
           cd "python version lume"
-          pyinstaller --noconfirm --onefile --windowed --name lume_python_gui --icon lume.ico --add-data "lume.png;." --add-data "lume.ico;." main.py
+          pyinstaller --noconfirm --onefile --windowed --name lume_python_gui --icon lume.ico --manifest main.manifest --add-data "lume.png;." --add-data "lume.ico;." main.py
 
       - name: Build Go GUI version
         run: |
