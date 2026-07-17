@@ -1,6 +1,6 @@
 # lume 🍃 
 ![Windows](https://img.shields.io/badge/Windows-0078D4?style=for-the-badge&logo=windows11&logoColor=white) 
-### Akıllı fotoğraf ve video arşivleme: EXIF metadata'sı ile otomatik klasörleme, MD5 (Python) ve SHA-256 (Go) ile kopya algılama
+### fotoğraf ve video arşivleme: EXIF metadata'sı ile otomatik klasörleme, MD5 (Python) ve SHA-256 (Go) ile kopya algılama
 
 
 
