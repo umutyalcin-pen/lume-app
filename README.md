@@ -1,10 +1,19 @@
 # lume 🍃 
 ![Windows](https://img.shields.io/badge/Windows-0078D4?style=for-the-badge&logo=windows11&logoColor=white) 
-### fotoğraf ve video arşivleme: EXIF metadata'sı ile otomatik klasörleme, MD5 (Python) ve SHA-256 (Go) ile kopya algılama
+
+### Fotoğraf ve video arşivleme
+
+EXIF metadata'sı ile otomatik klasörleme, MD5 (Python) ve SHA-256 (Go) ile kopya algılama.
+
+### Photo and video archiving
+
+Automatic folder organization with EXIF metadata, duplicate detection with MD5 (Python) and SHA-256 (Go).
 
 
 
-## Uygulama ile alakalı birkaç ekran görüntüsü / A few screenshots related to the app
+## Ekran Görüntüleri
+
+## Screenshots
 
 <p align="center">
     <img src="screenshots/lume python version window main dark en.png" alt="1" width="300" style="margin-right: 10px;"/> 
@@ -28,42 +37,46 @@
 </p>
 
 ---
-Türkçe Tanıtım
-- Dosya Düzenleyici: 
-Bilgisayarınızdaki dosyaları tek tek düzeltmeye artık gerek yok. Bu tool belirli formattaki dosyaları saniyeler içinde tarar, tek bir klasör altında güvenle kopyalayıp arşivler ve işlem sonunda detaylı bir liste sunar.
 
-Avantajları neler?
+## Türkçe Tanıtım
 
-.Yüzlerce dosyayı tek tek seçmek yerine tek tıkla hedef klasöre aktarın.
+### Dosya Düzenleyici
 
-.İhtiyacınız olan desteklenen medya uzantılarını arşivleyebilirsiniz (.jpg, .png, .mp4, .mov vb.).
+Bilgisayarınızdaki dosyaları tek tek düzenlemeye artık gerek yok.
+Bu araç desteklenen medya dosyalarını saniyeler içinde tarar, tek bir hedef klasör altında güvenle kopyalayıp arşivler ve işlem sonunda detaylı bir liste sunar.
 
-.İşlem sonunda hangi dosyanın nereye kopyalanıp arşivlendiğini net bir şekilde görün.
+### Avantajları neler?
 
----
+- Yüzlerce dosyayı tek tek seçmek yerine tek tıkla hedef klasöre aktarın.
+- İhtiyacınız olan desteklenen medya uzantılarını arşivleyebilirsiniz (.jpg, .png, .mp4, .mov vb.).
+- İşlem sonunda hangi dosyanın nereye kopyalanıp arşivlendiğini net bir şekilde görün.
 
-English Introduction
-- File Editor:
-
-No need to manually edit files on your computer one by one. This tool scans files of a specific format in seconds, securely copies and archives them under a single folder, and provides a detailed list at the end of the process.
-
-What are the advantages?
-
-. Transfer hundreds of files to the target folder with a single click instead of selecting them one by one.
-
-. Target only the supported media extensions you need (.jpg, .png, .mp4, .mov, etc.).
-
-. Clearly see which file was copied and archived where at the end of the process.
+Versiyonlar: Lume'un 3 farklı sürümü bulunmaktadır: Python GUI, Go GUI ve Go CLI.
+Her sürüme ait dosyalar ve ekran görüntüleri bu repoda detaylı olarak bulunuyor.
 
 ---
 
-Versiyonlar: Lume'un 3 farklı sürümü bulunmaktadır: Python GUI, Go GUI ve Go CLI. Her sürüme ait dosyalar ve ekran görüntüleri bu repoda detaylı olarak bulunuyor.
+## English Introduction
 
-Versions: Lume has 3 different versions: Python GUI, Go GUI, and Go CLI. Files and screenshots for each version are available in detail in this repository.
+### File Editor
+
+No need to manually organize files on your computer one by one.
+This tool scans supported media files in seconds, securely copies and archives them under a single target folder, and provides a detailed list at the end of the process.
+
+### What are the advantages?
+
+- Transfer hundreds of files to the target folder with a single click instead of selecting them one by one.
+- Target only the supported media extensions you need (.jpg, .png, .mp4, .mov, etc.).
+- Clearly see which file was copied and archived where at the end of the process.
+
+Versions: Lume has 3 different versions: Python GUI, Go GUI, and Go CLI.
+Files and screenshots for each version are available in detail in this repository.
 
 ---
 
-### 💻 Proje Teknolojileri / Project Technologies:
+### 💻 Proje Teknolojileri
+
+### Project Technologies
 
 <p align="left">
   <a href="https://www.python.org" target="_blank" rel="noreferrer">
@@ -87,14 +100,15 @@ Versions: Lume has 3 different versions: Python GUI, Go GUI, and Go CLI. Files a
 
 ## Gizlilik & Güvenlik
 
-Tüm işlemler yerel makinenizde çalışır.
-İnternet bağlantısı gerekmez.
-Veri toplama yok.
-Dosyalar bilgisayarınızda tutulur
-Açık kaynak bir projedir
-Kişisel veri saklanmaz veya gönderilmez
+- Tüm işlemler yerel makinenizde çalışır.
+- İnternet bağlantısı gerekmez.
+- Veri toplama veya analiz yoktur.
+- Dosyalar bilgisayarınızda tutulur.
+- Açık kaynak bir projedir.
+- Kişisel veri saklanmaz veya gönderilmez.
 
 ## Veri Depolama
+
 - `lume_config.json` - GUI sürümlerinde yerel ayarlar 
 
 - `lume_app.log` - GUI sürümlerinde yerel işlem loglanması
@@ -103,11 +117,12 @@ Kişisel veri saklanmaz veya gönderilmez
 
 ## Privacy & Security
 
-All operations run locally on your machine
-No internet connection required or used
-No data collection or analytics
-Files stay on your computer
-Full code transparency
+- All operations run locally on your machine.
+- No internet connection is required or used.
+- No data collection or analytics.
+- Files stay on your computer.
+- Open source project.
+- No personal data is stored or transmitted.
 
 ## Data Storage
 
@@ -117,28 +132,45 @@ Full code transparency
 
 ---
 
-## VirusTotal Doğrulamaları / VirusTotal Verification
+## VirusTotal Doğrulamaları
 
-Lume'un Python GUI, Go GUI ve Go CLI sürümleri için yayınlanan çalıştırılabilir dosyalar VirusTotal üzerinde ayrıca kontrol edilebilir. Bu bölüm release dosyalarının güvenlik tarama sonuçlarını README içinde tek yerde göstermek için ayrılmıştır.
+Lume'un Python GUI, Go GUI ve Go CLI sürümleri için yayınlanan çalıştırılabilir dosyalar VirusTotal üzerinde ayrıca kontrol edilebilir.
+Bu bölüm, release dosyalarının güvenlik tarama sonuçlarını README içinde tek yerde göstermek için ayrılmıştır.
 
-VirusTotal sonuçları tek başına kesinlik içermez ancak kullanıcıların indirdikleri dosyayı karşılaştırmaya yardımcı olur. Lume internet bağlantısı gerektirmeden yerel makinede çalışır, telemetri veya analiz verisi göndermez ve dosya düzenleme işlemlerini kullanıcının seçtiğii klasörler üzerinde yürütür.
+VirusTotal sonuçları tek başına mutlak garanti değildir; ancak kullanıcıların indirdikleri dosyayı bağımsız antivirüs motorlarıyla karşılaştırmasına yardımcı olur.
+Lume internet bağlantısı gerektirmeden yerel makinede çalışır, telemetri veya analiz verisi göndermez.
+Dosya düzenleme işlemlerini kullanıcının seçtiği kaynak/hedef klasörler üzerinde yürütür.
 
-The executable files published for the Python GUI, Go GUI, and Go CLI versions of Lume can also be checked on VirusTotal. This section is reserved to keep the security scan screenshots for all three versions in one place.
+## VirusTotal Verification
 
-VirusTotal results are not an absolute guarantee by themselves, but they help users compare the downloaded files against independent antivirus engines. Lume runs locally without requiring an internet connection, does not send telemetry or analytics data, and only works on the source/target folders selected by the user.
+The executable files published for the Python GUI, Go GUI, and Go CLI versions of Lume can also be checked on VirusTotal.
+This section is reserved to keep the security scan screenshots for all three versions in one place.
 
-| Sürüm / Version | Dosya / File | VirusTotal Görseli / Screenshot |
-| --- | --- | --- |
-| Python GUI | `Lume.exe` | Görsel eklenecek / Screenshot will be added |
-| Go GUI | `Lume_Pro.exe` | Görsel eklenecek / Screenshot will be added |
-| Go CLI | `lume.cli.version.compact.exe` | [Go CLI VirusTotal scan](screenshots/virustotal/go-cli-virustotal.png) |
+VirusTotal results are not an absolute guarantee by themselves, but they help users compare the downloaded files against independent antivirus engines.
+Lume runs locally without requiring an internet connection, does not send telemetry or analytics data, and only works on the source/target folders selected by the user.
+
+### Python GUI
+
+- Dosya / File: `Lume.exe`
+- VirusTotal görseli / Screenshot: Görsel eklenecek / Screenshot will be added
+
+### Go GUI
+
+- Dosya / File: `Lume_Pro.exe`
+- VirusTotal görseli / Screenshot: Görsel eklenecek / Screenshot will be added
+
+### Go CLI
+
+- Dosya / File: `lume.cli.version.compact.exe`
+- VirusTotal görseli / Screenshot: [Go CLI VirusTotal scan](screenshots/virustotal/go-cli-virustotal.png)
 
 <p align="center">
   <img src="screenshots/virustotal/go-cli-virustotal.png" alt="Go CLI VirusTotal scan" width="700"/>
 </p>
 
 ---
-Lume CLI
+
+## Lume CLI
 
 - Lume CLI versiyonunu kullanmak için GitHub'daki dosyaları indirin ve aşağıdaki adımları izleyin.
 
@@ -208,20 +240,31 @@ Example (with EXIF and renaming):
 
 ---
 
-Serbest / Misc:
+## Serbest
 
 - Uygulamanın genel amacı desteklenen formatlardaki dosyaları bilgisayarınızda düzgün bir şekilde kopyalayıp arşivlemektir.
-- Uygulamanın tüm versiyonlarını güvenlik taramalarından geçirdim ve tespit ettiğim potansiyel riskleri düzeltip kod güvenliğini artırdım. Düzeltilen kısımlar ve arkasındaki mantık hakkında yakında bir blog yazısı da paylaşacağım. Uygulamayla ilgili her türlü geri bildirim ve soru için "artabqos251@gmail.com" adresinden bana ulaşabilirsiniz.
+- Uygulamanın tüm versiyonlarını güvenlik taramalarından geçirdim ve tespit ettiğim potansiyel riskleri düzeltip kod güvenliğini artırdım.
+- Düzeltilen kısımlar ve arkasındaki mantık hakkında yakında bir blog yazısı da paylaşacağım.
+- Uygulamayla ilgili her türlü geri bildirim ve soru için "artabqos251@gmail.com" adresinden bana ulaşabilirsiniz.
+
+## Misc
 
 - The main purpose of the application is to neatly copy and archive files in supported formats on your computer.
-- I have conducted comprehensive security scans on all versions of the application, resolving potential risks and improving code safety. I will also publish a blog post detailing these fixes and the engineering decisions behind them. For any inquiries or feedback, feel free to contact me at "artabqos251@gmail.com".
+- I have conducted comprehensive security scans on all versions of the application, resolving potential risks and improving code safety.
+- I will also publish a blog post detailing these fixes and the engineering decisions behind them.
+- For any inquiries or feedback, feel free to contact me at "artabqos251@gmail.com".
 
 ---
 
-### ⚠️ Bilinen Sorunlar / Known Issues
+### ⚠️ Bilinen Sorunlar
 
-* **Koyu Mod Tablo Görünümü / Dark Mode Table View (Go GUI)**: 
-  * 🇹🇷 Go GUI sürümündeki koyu mod butonuna basıldığında tablonun (TableView) ve bazı butonların tamamen koyulaşmaması (beyaz kalması) sorunu bilinmektedir. Bu durum Windows işletim sisteminin yerel Win32 listview temalarından kaynaklanmaktadır. Bu sorun ileriki sürümlerde ele alınacaktır.
-  * 🇬🇧 There is a known issue in the Go GUI version where the TableView and certain buttons fail to completely darken (remaining white) when Dark Mode is enabled. This is related to the native Win32 listview theme engine in Windows and will be addressed in future releases.
-  
+- **Koyu Mod Tablo Görünümü (Go GUI)**:
+  Go GUI sürümündeki koyu mod butonuna basıldığında tablonun (TableView) ve bazı butonların tamamen koyulaşmaması (beyaz kalması) sorunu bilinmektedir.
+  Bu durum Windows işletim sisteminin yerel Win32 listview temalarından kaynaklanmaktadır.
+  Bu sorun ileriki sürümlerde ele alınacaktır.
 
+### ⚠️ Known Issues
+
+- **Dark Mode Table View (Go GUI)**:
+  There is a known issue in the Go GUI version where the TableView and certain buttons fail to completely darken (remaining white) when Dark Mode is enabled.
+  This is related to the native Win32 listview theme engine in Windows and will be addressed in future releases.
