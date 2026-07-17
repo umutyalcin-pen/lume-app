@@ -1,0 +1,9 @@
+# Log files (contains local user paths and filenames)
+*.log
+
+# Backup folders (local development copies)
+**/backup_*/
+
+# Python cache
+**/__pycache__/
+*.pyc
