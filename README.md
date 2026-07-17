@@ -195,7 +195,7 @@ Adım 3: Programı Çalıştırın
 
 Varsayılan olarak doğrudan dosya sistemi değiştirme tarihini (ModTime) kullanarak arşivlemek için:
 ```powershell
-.\Lume_LITE.exe "C:\KaynakKlasor" "C:\HedefKlasor"
+.\lume_go_cli.exe "C:\KaynakKlasor" "C:\HedefKlasor"
 ```
 
 Seçenekler ve Parametreler:
@@ -206,7 +206,7 @@ Seçenekler ve Parametreler:
 
 Örnek (EXIF ve Yeniden Adlandırma ile Kopyalama):
 ```powershell
-.\Lume_LITE.exe "C:\KaynakKlasor" "C:\HedefKlasor" --exif --rename
+.\lume_go_cli.exe "C:\KaynakKlasor" "C:\HedefKlasor" --exif --rename
 ```
 
 ---
@@ -229,7 +229,7 @@ Step 3: Run the Program
 
 By default, to archive files using their file system modification date (ModTime):
 ```powershell
-.\Lume_LITE.exe "C:\SourceFolder" "C:\TargetFolder"
+.\lume_go_cli.exe "C:\SourceFolder" "C:\TargetFolder"
 ```
 
 Options and Parameters:
@@ -240,7 +240,7 @@ Options and Parameters:
 
 Example (with EXIF and renaming):
 ```powershell
-.\Lume_LITE.exe "C:\SourceFolder" "C:\TargetFolder" --exif --rename
+.\lume_go_cli.exe "C:\SourceFolder" "C:\TargetFolder" --exif --rename
 ```
 
 ---
