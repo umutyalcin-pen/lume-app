@@ -35,7 +35,7 @@ Bilgisayarınızdaki dosyaları tek tek düzeltmeye artık gerek yok. Bu tool be
 Avantajları neler?
 .Yüzlerce dosyayı tek tek seçmek yerine tek tıkla hedef klasöre aktarın.
 
-.Sadece ihtiyacınız olan uzantıları (.jpg, .pdf, .mp4 vb.) hedefleyin.
+.İstediğiniz dosya uzantısını arşivleyebilirsiniz.
 
 .İşlem sonunda hangi dosyanın nereye kopyalanıp arşivlendiğini net bir şekilde görün.
 
@@ -187,10 +187,10 @@ Example (with EXIF analysis and smart renaming):
 
 Serbest / Misc:
 
-- Uygulamanın genel amacı, desteklenen formatlardaki dosyaları bilgisayarınızda kirlilik yaratmadan güvenle kopyalayıp arşivlemektir.
+- Uygulamanın genel amacı desteklenen formatlardaki dosyaları bilgisayarınızda düzgün bir şekilde kopyalayıp arşivlemektir.
 - Uygulamanın tüm versiyonlarını güvenlik taramalarından geçirdim ve tespit ettiğim potansiyel tehditleri düzeltip kod güvenliğini artırdım. Düzeltilen kısımlar ve arkasındaki mantık hakkında yakında bir blog yazısı da paylaşacağım. Uygulamayla ilgili her türlü geri bildirim ve soru için "artabqos251@gmail.com" adresinden bana ulaşabilirsiniz.
 
-- The primary goal of the application is to safely copy and archive supported file formats without cluttering your system.
+- The main purpose of the application is to neatly copy and archive files in supported formats on your computer.
 - I have conducted comprehensive security scans on all versions of the application, resolving potential vulnerabilities and optimizing code safety. I will also publish a blog post detailing these fixes and the engineering decisions behind them. For any inquiries or feedback, feel free to contact me at "artabqos251@gmail.com".
 
 ---
