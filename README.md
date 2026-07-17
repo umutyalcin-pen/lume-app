@@ -147,16 +147,18 @@ Varsayılan olarak doğrudan dosya sistemi değiştirme tarihini (ModTime) kulla
 .\Lume_LITE.exe "C:\KaynakKlasor" "C:\HedefKlasor"
 ```
 
-Görsellerde ve RAW dosyalarında EXIF çekim tarihini (DateTimeOriginal/Digitized/DateTime) okuyup buna göre arşivlemek için `--exif` parametresini ekleyin:
+Seçenekler ve Parametreler:
+* `--exif`       : Görsellerde ve RAW dosyalarında EXIF çekim tarihini (DateTimeOriginal) okur.
+* `--rename`     : Dosyaları hedef dizine kopyalarken `YYYYMMDD_HHMMSS` formatında yeniden adlandırır.
+* `--dry-run`    : Simülasyon modunda çalışır. Diske hiçbir klasör oluşturulmaz veya kopyalama yapılmaz.
+* `--help`, `-h` : Yardım menüsünü ve parametre listesini görüntüler.
+
+Örnek (EXIF ve Yeniden Adlandırma ile Kopyalama):
 ```powershell
-.\Lume_LITE.exe "C:\KaynakKlasor" "C:\HedefKlasor" --exif
+.\Lume_LITE.exe "C:\KaynakKlasor" "C:\HedefKlasor" --exif --rename
 ```
 
-Örnek (EXIF ile kopyalama):
-```powershell
-.\Lume_LITE.exe "C:\Users\KullaniciAdi\Pictures" "C:\Users\KullaniciAdi\Arsiv" --exif
-```
-
+---
 
 - To use the Lume CLI version, download the files from GitHub and follow the steps below:
 
@@ -179,14 +181,15 @@ By default, to archive files using their file system modification date (ModTime)
 .\Lume_LITE.exe "C:\SourceFolder" "C:\TargetFolder"
 ```
 
-To parse and use the EXIF shooting date (DateTimeOriginal/Digitized/DateTime) for images and RAW files, append the `--exif` flag:
-```powershell
-.\Lume_LITE.exe "C:\SourceFolder" "C:\TargetFolder" --exif
-```
+Options and Parameters:
+* `--exif`       : Reads EXIF shooting date (DateTimeOriginal) from images and RAW files.
+* `--rename`     : Renames files to `YYYYMMDD_HHMMSS` format when copying to target.
+* `--dry-run`    : Runs in simulation mode. No folders are created on disk.
+* `--help`, `-h` : Shows the bilingual help menu.
 
-Example (with EXIF analysis):
+Example (with EXIF analysis and smart renaming):
 ```powershell
-.\Lume_LITE.exe "C:\Users\Username\Pictures" "C:\Users\Username\Archive" --exif
+.\Lume_LITE.exe "C:\SourceFolder" "C:\TargetFolder" --exif --rename
 ```
 
 ---
