@@ -41,7 +41,7 @@ Automatic folder organization with EXIF metadata, duplicate detection with MD5 (
 
 ## Türkçe Tanıtım
 
-### Dosya Düzenleyici
+Dosya Düzenleyici
 
 Bilgisayarınızdaki dosyaları tek tek düzenlemeye artık gerek yok.
 Bu araç desteklenen medya dosyalarını saniyeler içinde tarar, tek bir hedef klasör altında güvenle kopyalayıp arşivler ve işlem sonunda detaylı bir liste sunar.
@@ -245,31 +245,31 @@ Example (with EXIF and renaming):
 
 ---
 
-## Serbest
+Serbest
 
 - Uygulamanın genel amacı desteklenen formatlardaki dosyaları bilgisayarınızda düzgün bir şekilde kopyalayıp arşivlemektir.
 - Uygulamanın tüm versiyonlarını güvenlik taramalarından geçirdim ve tespit ettiğim potansiyel riskleri düzeltip kod güvenliğini artırdım.
 - Düzeltilen kısımlar ve arkasındaki mantık hakkında yakında bir blog yazısı da paylaşacağım.
 - Uygulamayla ilgili her türlü geri bildirim ve soru için "artabqos251@gmail.com" adresinden bana ulaşabilirsiniz.
 
-## Misc
+Misc
 
-- The main purpose of the application is to neatly copy and archive files in supported formats on your computer.
-- I have conducted comprehensive security scans on all versions of the application, resolving potential risks and improving code safety.
-- I will also publish a blog post detailing these fixes and the engineering decisions behind them.
-- For any inquiries or feedback, feel free to contact me at "artabqos251@gmail.com".
+.The main purpose of the application is to neatly copy and archive files in supported formats on your computer.
+.I have conducted comprehensive security scans on all versions of the application, resolving potential risks and improving code safety.
+.I will also publish a blog post detailing these fixes and the engineering decisions behind them.
+.For any inquiries or feedback, feel free to contact me at "artabqos251@gmail.com".
 
 ---
 
-### ⚠️ Bilinen Sorunlar
+Bilinen Sorunlar
 
-- **Koyu Mod Tablo Görünümü (Go GUI)**:
-  Go GUI sürümündeki koyu mod butonuna basıldığında tablonun (TableView) ve bazı butonların tamamen koyulaşmaması (beyaz kalması) sorunu bilinmektedir.
-  Bu durum Windows işletim sisteminin yerel Win32 listview temalarından kaynaklanmaktadır.
-  Bu sorun ileriki sürümlerde ele alınacaktır.
+.Koyu Mod Tablo Görünümü (Go GUI):
+.Go GUI sürümündeki koyu mod butonuna basıldığında tablonun (TableView) ve bazı butonların tamamen koyulaşmaması (beyaz kalması) sorunu bilinmektedir.
+.Bu durum Windows işletim sisteminin yerel Win32 listview temalarından kaynaklanmaktadır.
+.Bu sorun ileriki sürümlerde ele alınacaktır.
 
-### ⚠️ Known Issues
+Known Issues
 
-- **Dark Mode Table View (Go GUI)**:
-  There is a known issue in the Go GUI version where the TableView and certain buttons fail to completely darken (remaining white) when Dark Mode is enabled.
-  This is related to the native Win32 listview theme engine in Windows and will be addressed in future releases.
+.Dark Mode Table View (Go GUI):
+.There is a known issue in the Go GUI version where the TableView and certain buttons fail to completely darken (remaining white) when Dark Mode is enabled.
+.This is related to the native Win32 listview theme engine in Windows and will be addressed in future releases.
