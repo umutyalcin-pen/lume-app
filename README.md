@@ -108,7 +108,7 @@ Full code transparency
 
 ## Data Storage
 
-- `lume_config.json` - Local settings (theme, language, target folder)
+- `lume_config.json` - Local settings 
   
 - `lume_app.log` - Local operation log
   
