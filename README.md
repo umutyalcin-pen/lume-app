@@ -28,37 +28,36 @@
 </p>
 
 ---
-🇹🇷 Türkçe Tanıtım
-📂 Dosya Düzenleyici: Karmaşaya Son 
-Bilgisayarınızdaki dağınık dosyaları (fotoğraflar, dokümanlar, videolar) manuel olarak düzenlemenize gerek yok. Bu araç belirli formattaki dosyaları saniyeler içinde tarar, tek bir klasör altında güvenle kopyalayıp arşivler ve işlem sonunda detaylı bir liste sunar.
+Türkçe Tanıtım
+- Dosya Düzenleyici: 
+Bilgisayarınızdaki dosyaları tek tek düzeltmeye artık gerek yok. Bu tool belirli formattaki dosyaları saniyeler içinde tarar, tek bir klasör altında güvenle kopyalayıp arşivler ve işlem sonunda detaylı bir liste sunar.
 
-Neden Kullanmalısınız?
+Avantajları neler?
+.Yüzlerce dosyayı tek tek seçmek yerine tek tıkla hedef klasöre aktarın.
 
-Zaman Tasarrufu: Yüzlerce dosyayı tek tek seçmek yerine tek tıkla hedef klasöre aktarın.
+.Sadece ihtiyacınız olan uzantıları (.jpg, .pdf, .mp4 vb.) hedefleyin.
 
-Format Odaklı: Sadece ihtiyacınız olan uzantıları (.jpg, .pdf, .mp4 vb.) hedefleyin.
-
-Kolay Takip: İşlem sonunda hangi dosyanın nereye kopyalanıp arşivlendiğini net bir şekilde görün.
-
----
-
-🇺🇸 English Description
-📂 File Organizer: End the Chaos
-No more manual organizing or copying of scattered files (photos, documents, videos) on your computer. This tool scans all files in specific formats within seconds, copies them under a single organized folder, and provides you with a detailed list.
-
-Why Should You Use It?
-
-Time-Saving: Instead of selecting hundreds of files one by one, transfer them to the target folder with a single click.
-
-Format-Focused: Target only the extensions you need (e.g., .jpg, .pdf, .mp4).
-
-Easy Tracking: Clearly see exactly where each file was copied and archived at the end of the process.
+.İşlem sonunda hangi dosyanın nereye kopyalanıp arşivlendiğini net bir şekilde görün.
 
 ---
 
-Versiyonlar: Lume'un farklı kullanım ihtiyaçlarına göre 3 sürümü bulunmaktadır: Python GUI (10 MB'lık tam arayüzlü exe), Go GUI (ultra hafif arayüzlü sürüm) ve Go CLI (komut satırı aracı). Sürümlere ait dosyalar ilgili klasörlerde ekran görüntüleriyle birlikte yer almaktadır.
+English Introduction
+- File Editor:
 
-Versions: Lume is available in 3 versions to suit different needs: Python GUI (a full 10 MB exe interface), Go GUI (an ultra-lightweight interface version), and Go CLI (a command-line tool). The files for all versions, along with screenshots, are located in their respective directories.
+No need to manually edit files on your computer one by one. This tool scans files of a specific format in seconds, securely copies and archives them under a single folder, and provides a detailed list at the end of the process.
+
+What are the advantages?
+. Transfer hundreds of files to the target folder with a single click instead of selecting them one by one.
+
+. Target only the extensions you need (.jpg, .pdf, .mp4, etc.).
+
+. Clearly see which file was copied and archived where at the end of the process.
+
+---
+
+Versiyonlar: Lume'un 3 farklı sürümü bulunmaktadır: Python GUI, Go GUI ve Go CLI. Sürümlere ait dosyalar Görseller repoda detaylı olarak bulunuyor.
+
+Versions: Lume has 3 different versions: Python GUI, Go GUI, and Go CLI. Files for each version are available in detail in the Images repository.
 
 ---
 
@@ -86,28 +85,26 @@ Versions: Lume is available in 3 versions to suit different needs: Python GUI (a
 
 ## Gizlilik & Güvenlik
 
-- **%100 Yerel**: Tüm işlemler yerel olarak makinenizde çalışır
-- **Ağ Bağlantısı Yok**: İnternet bağlantısı gerekmez veya kullanılmaz
-- **Telemetri Yok**: Veri toplama veya analitik yok
-- **Bulut Yok**: Dosyalar bilgisayarınızda kalır
-- **Açık Kaynak**: Tam kod şeffaflığı
+Tüm işlemler yerel makinenizde çalışır.
+İnternet bağlantısı gerekmez.
+Veri toplama yok.
+Dosyalar bilgisayarınızda tutulur
+Açık kaynak bir projedir
 
 ## Veri Depolama
-- `lume_config.json` - Yerel ayarlar (tema, dil, hedef klasör)
+- `lume_config.json` - Yerel ayarlar 
 
-- `lume_app.log` - Yerel işlem günlüğü
-
-- Hiçbir kişisel veri saklanmaz veya iletilmez
+- `lume_app.log` - Yerel işlem loglanması
 
 ---
 
 ## Privacy & Security
 
-- **100% Local**: All operations run locally on your machine
-- **No Network**: No internet connection required or used
-- **No Telemetry**: No data collection or analytics
-- **No Cloud**: Files stay on your computer
-- **Open Source**: Full code transparency
+All operations run locally on your machine
+No internet connection required or used
+No data collection or analytics
+Files stay on your computer
+Full code transparency
 
 ## Data Storage
 
@@ -116,12 +113,6 @@ Versions: Lume is available in 3 versions to suit different needs: Python GUI (a
 - `lume_app.log` - Local operation log
   
 - **No personal data** is stored or transmitted
-
----
-
-💡 Eklenecekler: Uygulama geliştirilecek ve sıkıştırılacak daha sonra yayınlanacaktır. O zamana kadar yerel olarak kullanabilirsiniz. Potansiyel güvenlik açığı çıkma ihtimali bitirilecek //siberde asla bitmez
-
-💡 To Be Added: The application will be further developed and compressed before its final release. Until then, you may use it locally. Potential security vulnerabilities will be eliminated as much as possible //though in cyber security, the work is never truly finished.
 
 ---
 Lume CLI
