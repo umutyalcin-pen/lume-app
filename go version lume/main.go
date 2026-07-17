@@ -749,7 +749,7 @@ func (ui *LumeUI) StartOrganizing() {
 				})
 				goto finish
 			default:
-				finalPath, skipped, err := organizer.ArchiveFileWithOptions(info, target, dryRun, rename, state)
+				finalPath, skipped, err := organizer.ArchiveFileWithOptions(ctx, info, target, dryRun, rename, state)
 				statusStr := ""
 				if err == nil {
 					if skipped {

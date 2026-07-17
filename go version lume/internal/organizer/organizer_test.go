@@ -1,6 +1,7 @@
 package organizer
 
 import (
+	"context"
 	"lume-go/internal/metadata"
 	"os"
 	"path/filepath"
@@ -48,7 +49,7 @@ func TestCopyFile_ContentPreserved(t *testing.T) {
 	content := []byte("Lume arşiv bütünlük testi - içerik korunmalı")
 	os.WriteFile(src, content, 0644)
 
-	if _, err := CopyFile(src, dst); err != nil {
+	if _, err := CopyFile(context.Background(), src, dst); err != nil {
 		t.Fatalf("CopyFile hata döndü: %v", err)
 	}
 
@@ -67,7 +68,7 @@ func TestCopyFile_HashIntegrity(t *testing.T) {
 	dst := filepath.Join(tmpDir, "hash_dst.bin")
 	os.WriteFile(src, []byte("SHA-256 bütünlük testi verileri 1234567890"), 0644)
 
-	if _, err := CopyFile(src, dst); err != nil {
+	if _, err := CopyFile(context.Background(), src, dst); err != nil {
 		t.Fatalf("CopyFile hata döndü: %v", err)
 	}
 
@@ -84,7 +85,7 @@ func TestCopyFile_PermissionsPreserved(t *testing.T) {
 	dst := filepath.Join(tmpDir, "perm_dst.dat")
 	os.WriteFile(src, []byte("permission test"), 0644)
 
-	if _, err := CopyFile(src, dst); err != nil {
+	if _, err := CopyFile(context.Background(), src, dst); err != nil {
 		t.Fatalf("CopyFile hata döndü: %v", err)
 	}
 
@@ -170,7 +171,7 @@ func TestAtomicCopy_Integrity(t *testing.T) {
 
 	srcHash, _ := metadata.GetFileHash(src)
 
-	if err := AtomicCopy(src, dst); err != nil {
+	if err := AtomicCopy(context.Background(), src, dst); err != nil {
 		t.Fatalf("AtomicCopy hata döndü: %v", err)
 	}
 
@@ -202,7 +203,7 @@ func TestArchiveFile_FullArchiveFlow(t *testing.T) {
 		t.Fatalf("GetFileInfo hata döndü: %v", err)
 	}
 
-	if err := ArchiveFile(info, dstDir); err != nil {
+	if err := ArchiveFile(context.Background(), info, dstDir); err != nil {
 		t.Fatalf("ArchiveFile hata döndü: %v", err)
 	}
 
@@ -253,14 +254,14 @@ func TestArchiveFile_DuplicateSkipped(t *testing.T) {
 		t.Fatalf("GetFileInfo hata döndü: %v", err)
 	}
 
-	if err := ArchiveFile(info, dstDir); err != nil {
+	if err := ArchiveFile(context.Background(), info, dstDir); err != nil {
 		t.Fatalf("İlk ArchiveFile hata döndü: %v", err)
 	}
 
 	os.WriteFile(srcFile, content, 0644)
 	info2, _ := metadata.GetFileInfo(srcFile)
 
-	if err := ArchiveFile(info2, dstDir); err != nil {
+	if err := ArchiveFile(context.Background(), info2, dstDir); err != nil {
 		t.Fatalf("Kopya ArchiveFile hata döndü: %v", err)
 	}
 }

@@ -1,6 +1,7 @@
 package organizer
 
 import (
+	"context"
 	"crypto/sha256"
 	"encoding/hex"
 	"fmt"
@@ -74,12 +75,12 @@ func NewState() *State {
 	}
 }
 
-func ArchiveFile(info metadata.FileInfo, targetBase string) error {
-	_, _, err := ArchiveFileWithOptions(info, targetBase, false, false, nil)
+func ArchiveFile(ctx context.Context, info metadata.FileInfo, targetBase string) error {
+	_, _, err := ArchiveFileWithOptions(ctx, info, targetBase, false, false, nil)
 	return err
 }
 
-func ArchiveFileWithOptions(info metadata.FileInfo, targetBase string, dryRun bool, rename bool, state *State) (finalPath string, skipped bool, err error) {
+func ArchiveFileWithOptions(ctx context.Context, info metadata.FileInfo, targetBase string, dryRun bool, rename bool, state *State) (finalPath string, skipped bool, err error) {
 	if state == nil {
 		state = NewState()
 	}
@@ -170,17 +171,17 @@ func ArchiveFileWithOptions(info metadata.FileInfo, targetBase string, dryRun bo
 	state.PlannedPaths[finalPath] = true
 
 	if !dryRun {
-		if err := AtomicCopy(info.Path, finalPath); err != nil {
+		if err := AtomicCopy(ctx, info.Path, finalPath); err != nil {
 			delete(state.PlannedPaths, finalPath)
 			return "", false, fmt.Errorf("archive copy error for %s: %w", filename, err)
 		}
-		logger.Info("Successfully archived (copied): %s -> %s", info.Filename, finalPath)
+		logger.Info("Archived: %s", filename)
 	} else {
 		srcHash, errHash := metadata.GetFileHash(info.Path)
 		if errHash == nil {
 			state.PlannedMeta[finalPath] = plannedFile{size: info.Size, hash: srcHash}
 		}
-		logger.Info("Simulation: would archive %s -> %s", info.Filename, finalPath)
+		logger.Info("Simulation: would archive %s", info.Filename)
 	}
 
 	return finalPath, false, nil
@@ -228,8 +229,8 @@ func ResolveConflict(path string, state *State) (string, error) {
 	return "", fmt.Errorf("10000 çakışma varyantı denendi, uygun isim bulunamadı: %s", path)
 }
 
-func AtomicCopy(src, dst string) error {
-	sh, err := CopyFile(src, dst)
+func AtomicCopy(ctx context.Context, src, dst string) error {
+	sh, err := CopyFile(ctx, src, dst)
 	if err != nil {
 		os.Remove(dst)
 		return fmt.Errorf("copy failed: %w", err)
@@ -249,7 +250,7 @@ func AtomicCopy(src, dst string) error {
 	return nil
 }
 
-func CopyFile(src, dst string) (string, error) {
+func CopyFile(ctx context.Context, src, dst string) (string, error) {
 	srcInfo, err := os.Stat(src)
 	if err != nil {
 		return "", err
@@ -265,32 +266,48 @@ func CopyFile(src, dst string) (string, error) {
 	if err != nil {
 		return "", err
 	}
-	
-	var outClosed bool
+
+	var success bool
 	defer func() {
-		if !outClosed {
-			out.Close()
+		out.Close()
+		if !success {
+			os.Remove(dst)
 		}
 	}()
 
 	h := sha256.New()
-	if _, err := io.Copy(io.MultiWriter(out, h), in); err != nil {
-		out.Close()
-		outClosed = true
-		return "", err
+	buf := make([]byte, 64*1024)
+
+	for {
+		select {
+		case <-ctx.Done():
+			return "", ctx.Err()
+		default:
+		}
+
+		n, readErr := in.Read(buf)
+		if n > 0 {
+			if _, writeErr := out.Write(buf[:n]); writeErr != nil {
+				return "", writeErr
+			}
+			h.Write(buf[:n])
+		}
+		if readErr == io.EOF {
+			break
+		}
+		if readErr != nil {
+			return "", readErr
+		}
 	}
 
 	if err := out.Sync(); err != nil {
-		out.Close()
-		outClosed = true
 		return "", fmt.Errorf("dosya senkronize edilemedi: %w", err)
 	}
 
 	if err := out.Close(); err != nil {
-		outClosed = true
 		return "", fmt.Errorf("dosya kapatılamadı: %w", err)
 	}
-	outClosed = true
+	success = true
 
 	if err := os.Chmod(dst, srcInfo.Mode()); err != nil {
 		logger.Error("İzinler ayarlanamadı: %s: %v", filepath.Base(dst), err)
